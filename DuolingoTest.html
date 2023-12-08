@@ -11,7 +11,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-sm fixed-top" style="background-color: #7ECBBC;">
         <div class="container">
-           <a href="#" class="navbar-brand">Кошколого</a>
+           <a href="#" class="navbar-brand">Кошолого</a>
            <button class="navbar-toggler" type="'button" data-bs-toggle="collapse" data-bs-target="#navmenu"><span class="navbar-toggler-icon"></span></button>
            <div class="collapse navbar-collapse" id="navmenu">
             <ul class="navbar-nav ms-auto">
@@ -289,9 +289,10 @@
     </section>
     </faq>
     <section id="Feedback" class="p-5 bs-body-color">
-      <div class="container">
+      <div class="container" style="max-height: 400px; overflow-x: auto;">  
         <h1 class="text-center mb-5">Отзывы</h1>
-        <div class="row g-4" style="justify-content: space-around;">
+        <div class="row g-4 flex-nowrap" style="justify-content: space-around;">
+          <div class="col-4 overflow-auto">
           <div class="card mb-3" style="max-width: 18rem; background-color: #FFE49E;">
             <div class="card-header">Имя</div>
             <div class="card-body">
@@ -320,6 +321,14 @@
               <p class="card-text">ляляляляля</p>
             </div>
           </div>
+          <div class="card mb-3" style="max-width: 18rem; background-color: #FFE49E;">
+            <div class="card-header">Имя</div>
+            <div class="card-body">
+              <h5 class="card-title">Ученик/родитель/кто-нибудь еще</h5>
+              <p class="card-text">ляляляляля</p>
+            </div>
+          </div>
+        </div>
         </div>
       </div>
     </section>
