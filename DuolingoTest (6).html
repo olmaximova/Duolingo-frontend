@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href='English.css'>
+    <title>Duolingo Test</title>
+    <style>
+
+      @font-face {
+        font-family: "Lack";
+        font-style: normal;
+        font-weight: 900;
+        /* Браузер сначала попробует найти шрифт локально */
+        src: local("Lack"),
+            /* Если не получилось, загрузит woff2 */
+            url("/fonts/Lack-Regular.otf") format("otf"),
+            /* Если браузер не поддерживает woff2, загрузит woff */
+            url("/fonts/Lack-Regular.otf") format("otf");
+      }
+
+      @font-face {
+        font-family: "Lack";
+        font-style: italic;
+        font-weight: 900;
+        /* Браузер сначала попробует найти шрифт локально */
+        src: local("Lack"),
+            /* Если не получилось, загрузит woff2 */
+            url("/fonts/Lack-Italic.otf") format("otf"),
+            /* Если браузер не поддерживает woff2, загрузит woff */
+            url("/fonts/Lack-Italcic.otf") format("otf");
+      }
+      @font-face {
+        font-family: "Lack-Line";
+        font-style: normal;
+        font-variant: line;
+        font-weight: 900;
+        /* Браузер сначала попробует найти шрифт локально */
+        src: local("Lack"),
+            /* Если не получилось, загрузит woff2 */
+            url("/fonts/Lack-Line-Regular.otf") format("otf"),
+            /* Если браузер не поддерживает woff2, загрузит woff */
+            url("/fonts/Lack-Line-Regular.otf") format("otf");
+      }
+
+      @font-face {
+        font-family: "Lack-Line";
+        font-style: italic;
+        font-variant: line;
+        font-weight: 900;
+        /* Браузер сначала попробует найти шрифт локально */
+        src: local("Lack"),
+            /* Если не получилось, загрузит woff2 */
+            url("/fonts/Lack-Line-Italic.otf") format("otf"),
+            /* Если браузер не поддерживает woff2, загрузит woff */
+            url("/fonts/Lack-Line-Italcic.otf") format("otf");
+      }
+
+      .font {
+        font-family: "Lack";
+        font-style: normal;
+      }
+
+      a {
+	      font-family: 'Lack';
+        font-style: italic;
+        white-space: nowrap;
+        text-align: center;
+      }
+
+      h1 {
+        font-family: 'Lack';
+        font-style: normal;
+        white-space: nowrap;
+      }
+      
+      h2 {
+        white-space: nowrap;
+        font-family: 'Lack';
+        font-style: normal;
+      }
+
+      p {
+	      font-family: 'Lack';
+        font-style: normal;
+      }
+
+      .card-header {
+        font-family: 'Lack';
+        font-style: normal;
+      }
+
+    </style>
+</head>
+<body style=" background-image: url(img/background4.png);">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm fixed-top" style="background-color: #7ECBBC; align-content: center; align-items: center;" >
+        <div class="container">
+           <a href="#" class="navbar-brand">Кошолого</a>
+           <button class="navbar-toggler" type="'button" data-bs-toggle="collapse" data-bs-target="#navmenu"><span class="navbar-toggler-icon"></span></button>
+           <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a href="#questions" class="nav-link">FAQ</a>
+                </li>                
+                <li class="nav-item">
+                    <a href="#Course" class="nav-link">ЗАПИСАТЬСЯ НА КУРС</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Feedback" class="nav-link">ОТЗЫВЫ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Contact" class="nav-link">КОНТАКТЫ ЦЕНТРОВ</a>
+                </li>
+              </li>
+                <li class="nav-item">
+                    <button class="btn btn-sm" style="background-color: #FFDA73;"><a href="Login.html" class="nav-link">Войти</a></button>
+                </li>
+            </ul>
+           </div> 
+        </div>       
+    </nav>
+    <!-- Showcase -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        .neww-container {
+            display: grid;
+            grid-template-columns: 3fr 3fr;
+            grid-template-rows: auto;
+            grid-gap: 2rem;
+        }
+
+        .tab {
+            width: 100%;
+            height: 100%;
+            padding: 1rem;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tab:nth-child(1) {
+            grid-row: 1;
+            grid-column: 1;
+        }
+
+        .tab:nth-child(2) {
+            grid-row: 1 ;
+            grid-column: 2;
+        }
+
+        .tab img {
+            max-width: 100%;
+            height: auto;
+        }
+        @media screen and (max-width: 768px) {
+        .tab:nth-child(1) {
+          grid-row: 1;
+          grid-column: 1 / span 2;
+        }
+
+        .tab:nth-child(2) {
+          grid-row: 2;
+          grid-column: 1 / span 2;
+        }
+      }
+    </style>
+      <section class="bs-body-color text-dark p-5 text-center">
+        <div class="neww-container">
+            <div class="tab mb-3">
+                <div class="content">
+                    <h1>Курсы для подготовки к </h1>
+                    <h1><span class="text-success">Duolingo English Test</span></h1>
+                    <p class="lead my-4">
+                        Поступи в ВУЗ мечты с Duolingo English Test
+                    </p>
+                    <a href="#Course"><button class="btn btn-lg" style="background-color: #FFDA73;">Записаться бесплатно</button></a>
+                </div>
+            </div>
+            <div class="tab mb-3">
+                <img class="img-fluid d-none d-sm-block" src="img/thecats.PNG" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- cards -->
+    <info>
+        <style>
+          .card {
+            max-width: 18rem;
+            margin-bottom: 1rem;
+          }
+        
+          .card {
+            width: 100%; /* Ширина карточки будет равна ширине ячейки */
+            height: 100%; /* Высота карточки будет равна высоте ячейки */
+            max-width: 100%; /* Максимальная ширина равна ширине ячейки */
+            max-height: 100%; /* Максимальная высота равна высоте ячейки */
+            padding: 1rem; /* Добавляем внутренний отступ */
+            box-sizing: border-box; /* Учитываем отступы в размере элемента */
+          }
+        
+          .new-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 1rem;
+          }
+        
+          .card:nth-child(1) {
+            grid-row: 1;
+            grid-column: 1 / span 2;
+            background-color: #8D95D2;
+          }
+        
+          .card:nth-child(2) {
+            grid-row: 1;
+            grid-column: 3;
+            background-color: #7ECBBC;
+          }
+        
+          .card:nth-child(3) {
+            grid-row: 2;
+            grid-column: 2 / span 2;
+            background-color: #CBF397;
+          }
+        
+          .card:nth-child(4) {
+            grid-row: 2;
+            grid-column: 1;
+            background-color: #FFE49E;
+          }
+
+          .card:nth-child(5) {
+            grid-row: 3;
+            grid-column: 1 / span 3;
+            background-color: #FFC49E;
+          }
+        
+          .special-card {
+            grid-column: span 2;
+          }
+        
+          /* Уменьшаем размер шрифта для контента внутри карточки */
+          .card-body {
+            font-size: 14px;
+          }
+
+          .container-wrapper {
+            border: 1rem ; /* Ширина и цвет границы */
+            padding-top: 1rem;
+            padding-bottom: 2rem;
+            padding-left: 5rem;
+            padding-right: 5rem; /* Отступ вокруг границы */
+          }
+
+          @media screen and (max-width: 768px) {
+         
+         .card:nth-child(1) {
+           grid-row: 1;
+           grid-column: 1 / span 3;
+          }
+       
+         .card:nth-child(2) {
+           grid-row: 2;
+           grid-column: 1 / span 3;
+          }
+       
+         .card:nth-child(3) {
+           grid-row: 3;
+           grid-column: 1 / span 3;
+          }
+       
+         .card:nth-child(4) {
+           grid-row: 4;
+           grid-column: 1 / span 3;
+          }
+
+         .card:nth-child(5) {
+           grid-row: 5;
+           grid-column: 1 / span 3;
+          }
+        }
+        </style>
+        <!-- about -->
+        <div class="container-wrapper">
+          <div class="oval-container" style="display: flex; margin: auto; margin-bottom: 3rem;">
+            <div class="oval">
+              <h2 class="center">О нас</h2>
+            </div>
+          </div> 
+          <div class="new-container">
+            <div class="card mb-3" style="max-width: 2fr; background-color: #8D95D2;">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Primary card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+            <div class="card mb-3" style="max-width: 2fr; background-color: #7ECBBC;">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Secondary card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+            <div class="card mb-3" style="max-width: 2fr; background-color: #CBF397;">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Secondary card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+            <div class="card mb-3" style="max-width: 2fr; background-color: #FFE49E;">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Secondary card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+            <div class="card mb-3" style="max-width: 2fr; background-color: #FFC49E;">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Secondary card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>            
+    </info>
+    <!-- teachers -->
+    <section class="p-4">
+      <div class="oval-container" style="display: flex; margin: auto; margin-bottom: 3rem;">
+        <div class="oval">
+          <h3 class="text-center">Преподаватели</h3>
+        </div>
+      </div> 
+      <div id="multiItemExample2" class="carousel carousel-dark carousel-fade slide" data-bs-ride="carousel">     
+        <div class="container" style="display: flex;"> 
+          <div class="carousel-inner" style="display: flex; margin: auto;">
+            <div class="carousel-item active" data-bs-interval="5000">
+              <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-4 g-4">
+                <div class="col">
+                  <div class="card" style="width: auto; height:auto; background-color: #FFE49E;">
+                    <img src="img/thecats.PNG" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-header">Имя</h5>
+                      <p class="card-text">Небольшой пример текста, который должен основываться на названии карточки и составлять основную часть содержимого карточки.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card" style="width: auto; height:auto; background-color: #CBF397;">
+                    <img src="img/thecats.PNG" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-header">Имя</h5>
+                      <p class="card-text">Небольшой пример текста, который должен основываться на названии карточки и составлять основную часть содержимого карточки.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card" style="width: auto; height:auto; background-color: #50B09D;">
+                    <img src="img/thecats.PNG" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-header">Имя</h5>
+                      <p class="card-text">Небольшой пример текста, который должен основываться на названии карточки и составлять основную часть содержимого карточки.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card" style="width: auto; height:auto; background-color: #FFDA73">
+                    <img src="img/thecats.PNG" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-header">Имя</h5>
+                      <p class="card-text">Небольшой пример текста, который должен основываться на названии карточки и составлять основную часть содержимого карточки.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+              <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-4 g-4">
+                <div class="col">
+                  <div class="card" style="width: auto; height: auto; background-color: #7ECBBC;">
+                    <img src="img/thecats.PNG" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-header">Имя</h5>
+                      <p class="card-text">Небольшой пример текста, который должен основываться на названии карточки и составлять основную часть содержимого карточки.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card" style="width: auto; height: auto; background-color: #8D95D2">
+                    <img src="img/thecats.PNG" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-header">Имя</h5>
+                      <p class="card-text">Небольшой пример текста, который должен основываться на названии карточки и составлять основную часть содержимого карточки.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card" style="width: auto; height: auto; background-color: #FFE49E">
+                    <img src="img/thecats.PNG" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-header">Имя</h5>
+                      <p class="card-text">Небольшой пример текста, который должен основываться на названии карточки и составлять основную часть содержимого карточки.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card" style="width: auto; height: auto; background-color: #FFC49E;">
+                    <img src="img/thecats.PNG" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-header">Имя</h5>
+                      <p class="card-text">Небольшой пример текста, который должен основываться на названии карточки и составлять основную часть содержимого карточки.</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev"  type="button" data-bs-target="#multiItemExample2" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon d-none d-sm-block" aria-hidden="true"></span>
+          <span class="visually-hidden">Предыдущий</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#multiItemExample2" data-bs-slide="next">
+          <span class="carousel-control-next-icon d-none d-sm-block" aria-hidden="true"></span>
+          <span class="visually-hidden">Следующий</span>
+        </button>
+      </div>
+      </div>
+    </section>
+    <!-- FAQ -->
+    <faq>
+    <section id="questions" class="p-5">
+        <div class="container-sm">
+          <div class="oval-container" style="display: flex; margin: auto; margin-bottom: 3rem;">
+            <div class="oval">
+              <h2 style="align-content: center;">FAQ</h2>
+            </div>
+          </div>
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne" style="background-color: #7ECBBC;">
+                  Как я могу подготовиться к Duolingo English Test?
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"> Наш курс предлагает специальные материалы и уроки, разработанные для помощи ученикам в подготовке к тесту DET. Мы предоставляем практические задания, тесты и ресурсы, чтобы помочь вам улучшить свои навыки английского языка.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo" style="background-color: #CBF397;">
+                  Какие преимущества я получу, проходя курс подготовки к Duolingo English Test?
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"> Наш курс предлагает структурированный план обучения, который поможет вам освоить ключевые навыки, необходимые для успешного сдачи теста DET. Вы также получите обратную связь от опытных преподавателей и возможность практиковать навыки на реалистических практических заданиях.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree" style="background-color: #7ECBBC;">
+                  Каковы требования для участия в курсах подготовки к Duolingo English Test?
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Требования для курсов подготовки могут в зависимости от конкретного курса. Однако, обычно требуется базовое знание английского языка и доступ к компьютеру с подключением к интернету.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree" style="background-color: #CBF397;;">
+                  Как я смогу отслеживать свой прогресс во время прохождения курсов?
+                </button>
+              </h2>
+              <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">У Вас будет возможность отслеживать свой прогресс через нашу платформу обучения. Вы сможете видеть результаты тестов, пройденные уроки и получать обратную связь от преподавателей.</div>
+              </div>
+            </div>
+            <!-- <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseThree" style="background-color: #7ECBBC;">
+                  вопрос 5
+                </button>
+              </h2>
+              <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">лялялялялялляля</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseThree" style="background-color: #CBF397;">
+                  вопрос 6
+                </button>
+              </h2>
+              <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body" style="background-color: #7ecbbc4b">лялялялялялляля</div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+    </section>
+    </faq>    
+    <!-- feedback -->
+     <section id="Feedback" class="p-5">     
+      <div id="multiItemExample" class="carousel carousel-dark carousel-fade slide" data-bs-ride="carousel">
+        <div class="container">
+          <div class="oval-container" style="display: flex; margin: auto; margin-bottom: 3rem;">
+            <div class="oval">
+              <h2 class="text-center">Отзывы</h2>
+            </div>
+          </div> 
+          <div class="carousel-inner" style="display:flex;">
+            <div class="carousel-item active" data-bs-interval="5000">
+              <div class="row g-3">
+                <div class="col">
+                  <div class="card" style="width: auto; height: auto; background-color: #FFC49E;">
+                    <div class="card-header">Имя</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Ученик/родитель/кто-нибудь еще</h5>
+                      <p class="card-text">лялялялляля</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card" style=" width: auto; height: auto;background-color: #7ECBBC;">
+                    <div class="card-header">Имя</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Ученик/родитель/кто-нибудь еще</h5>
+                      <p class="card-text">лялялялляля</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card" style="width: auto; height: auto; background-color: #8D95D2">
+                    <div class="card-header">Имя</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Ученик/родитель/кто-нибудь еще</h5>
+                      <p class="card-text">лялялялляля</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+              <div class="row g-3">
+                  <div class="col">
+                    <div class="card" style="width: auto; height: auto; background-color: #50B09D">
+                      <div class="card-header">Имя</div>
+                      <div class="card-body">
+                        <h5 class="card-title">Ученик/родитель/кто-нибудь еще</h5>
+                        <p class="card-text">лялялялляля</p>
+                      </div>
+                    </div>
+                </div>
+                  <div class="col">
+                    <div class="card" style="width: auto; height: auto; background-color: #FFE49E;">
+                      <div class="card-header">Имя</div>
+                      <div class="card-body">
+                        <h5 class="card-title">Ученик/родитель/кто-нибудь еще</h5>
+                        <p class="card-text">лялялялляля</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card" style="width: auto; height: auto; background-color: #CBF397;">
+                      <div class="card-header">Имя</div>
+                      <div class="card-body">
+                        <h5 class="card-title">Ученик/родитель/кто-нибудь еще</h5>
+                        <p class="card-text">лялялялляля</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <button class="carousel-control-prev" style="padding-right: 8rem; padding-top: 8rem;" type="button" data-bs-target="#multiItemExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+              <span class="visually-hidden">Предыдущий</span>
+          </div>
+          </button>
+          <button class="carousel-control-next" style="padding-left: 8rem; padding-top: 8rem;" type="button" data-bs-target="#multiItemExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Следующий</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    </section>
+    <!-- form -->
+    <section id="Course" class="p-5">
+      <div class="container">
+        <div class="card" style="background-color: #8D95D2;">
+          <div class="card-header text-center" style="color: #FFE49E; font-size: 30px;">Форма обратной связи</div>
+          <div class="card-body">
+            <div class="input-group">
+              <span class="input-group-text" style="color: #50B09D;">Имя и фамилия</span>
+              <input type="text" aria-label="Имя" class="form-control" placeholder="Имя">
+              <input type="text" aria-label="Фамилия" class="form-control" placeholder="Фамилия">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label" style="color: #FFE49E;">Адрес электронной почты</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label" style="color: #FFE49E;">Комментарий</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button class="btn btn-sm" style="background-color: #FFDA73;">Отправить</button>
+        </div>
+      </div>
+  </section>  
+  <!-- footer -->
+  <section>
+    <div class="d-flex flex-column flex-sm-row justify-content-sm-around justify-content-center py-4 border-top position-relative" style="background-color: #7ECBBC;">
+      <p style="margin: auto">&copy; Purrrfect Language Academy, 2023. All rights reserved.</p>
+      <ul class="list-unstyled d-flex" style="margin: auto;">
+          <li class="ms-3"><a href="https://t.me/PurrrfectAcademy" style="color: black;"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+          </svg></a></li>
+          <li class="ms-3"><a href="/" style="color: black;"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+          </svg></a></li>
+          <li class="ms-3"><a href="mailto:purfectacademy@gmail.com" style="color: black;">purfectacademy@gmail.com</a></li>
+      </ul>
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
